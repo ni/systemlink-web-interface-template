@@ -15,6 +15,9 @@
    "permission": "",
    "resources": {
       "en": {
+	     "css": [
+		    "plugins/webvi_plugin/resources/css/webvi_plugin.css"
+		 ],
          "json": [
             "plugins/webvi_plugin/resources/json/locales/en.json"
          ]
