@@ -9,6 +9,11 @@ __Creating a Skyline Web Application__
 * Replace `htdocs\plugins\webvi_plugin\index.html` with your application or modify `htdocs\plugins\webvi_plugin\config.json` if you need to launch a page other than index.html
 * From the Windows Start menu on your server launch the `NI Web Server Configuration` utility.  Click on the Control tab and then Restart the Web Server.
 
+_Defining a Custom Icon
+
+* Add the icon image file to `htdocs\plugins\webvi_plugin\resources\images`.
+* Modify `htdocs\plugins\webvi_plugin\resources\css\webvi_plugin.css` to use the new icon.
+* Modify `htdocs\plugins\webvi_plugin\config.json` to use the new icon class.
 
 __Deploying a WebVI__
 
@@ -21,4 +26,3 @@ __Deploying a WebVI__
 __TODO__
 
 * Create a script to uniquify the plugin to make it easier to create multiple plugins
-* Figure out how to use custom icons
