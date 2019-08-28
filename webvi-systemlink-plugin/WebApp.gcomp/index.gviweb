@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="BA47596955D743F15C55404D5F0B2312A8323C0DD4E36C54D5EE791ED5DB2B37F27F738BFAAE46FE47DD24C7DEC68E34EEC60BE60E96D7D004A90372BF27AC36" Timestamp="1D55DD694A1A1C0" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="33A734568705E482C34CD89D00D7F7C0CB82E9874393C5D263520FDA56630148E4DBA575A763FBCAEC034A4ADE60417A0477106EDC20AB6416D541A4CC42E084" Timestamp="1D55DDC677A7CF3" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="6.2.1.50272" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="6.2.0.49152" Version="6.2.0.49152" />
 		<ParsableNamespace AssemblyFileVersion="6.2.1.50272" FeatureSetName="LabVIEW Virtual Instrument" Name="http://www.ni.com/LabVIEW.VI" OldestCompatibleVersion="6.2.0.49152" Version="6.2.0.49152" />
@@ -66,9 +66,7 @@
 			</Comment>
 		</BlockDiagram>
 		<HtmlFrontPanel Height="[float]768" Id="15" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0" Width="[float]1024" xmlns="http://www.ni.com/NationalInstruments.LabVIEW.HtmlVI">
-			<HtmlText BaseName="[string]Text" Height="[float]128" Id="36" Left="[float]180" MinHeight="[float]11" MinWidth="[float]11" Text="[string]Hello, World" TextWrapping="[TextWrapping]Wrap" Top="[float]132" Width="[float]576" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
-				<FontSetting FontFamily="Segoe UI" FontSize="72" Id="44" xmlns="http://www.ni.com/PlatformFramework" />
-			</HtmlText>
+			<HtmlText BaseName="[string]Text" Height="[float]32" Id="45" Left="[float]244" MinHeight="[float]11" MinWidth="[float]11" Text="[string]On the WebVI Panel, place controls and indicators to respond to user input and display data.&#xD;&#xA;These controls will appear on the web page that is created when you build this Web Application." TextWrapping="[TextWrapping]Wrap" Top="[float]180" Width="[float]516" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 		</HtmlFrontPanel>
 	</VirtualInstrument>
 </SourceFile>

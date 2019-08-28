@@ -57,7 +57,7 @@
       <ComponentSubtypeIdentifier>Distribution:NiPackagePartial</ComponentSubtypeIdentifier>
       <BuildId>C:\Users\markblack\Documents\GitHub\systemlink-web-interface-template\webvi-systemlink-plugin\Builds\WebApp</BuildId>
     </RootBuildId>
-    <OutputPath>Builds\WebApp\ni-systemlinkwebviplugin-labview-webapp-bin-1_1.0.0.7_windows_x64.nipkg</OutputPath>
+    <OutputPath>Builds\WebApp\ni-systemlinkwebviplugin-labview-webapp-bin-1_1.0.0.0_windows_x64.nipkg</OutputPath>
     <BuildName>WebApp</BuildName>
     <State>Success</State>
     <LastTotalTime>00:00:07</LastTotalTime>
@@ -76,7 +76,7 @@
     <OutputPath>Builds\WebApp_Web Server</OutputPath>
     <BuildName>WebApp</BuildName>
     <State>Success</State>
-    <LastTotalTime>00:00:01</LastTotalTime>
+    <LastTotalTime>00:00:02</LastTotalTime>
     <HasChild>False</HasChild>
     <QualifiedName>::Web Server::Interactive::WebApp.gcomp</QualifiedName>
   </Job>
