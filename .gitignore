@@ -17,6 +17,11 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# NXG files
+.cache
+Builds
+*Text_en-US.lvindexcache
+
 # =========================
 # Operating System Files
 # =========================

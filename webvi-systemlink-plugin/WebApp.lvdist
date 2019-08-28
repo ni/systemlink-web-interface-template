@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="4C3B4A89490167EEDAFA51CAB1F3A5942A12E152B824E092EB5F62B8F33540F769F0711E7F285BC3D08CDB8E931E433A09F363791A16252A4E9664042D48E233" Timestamp="1D55DD6949FF465" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="6.2.1.50272" FeatureSetName="GComponentFeatureSet" Name="http://www.ni.com/GComponent.xsd" OldestCompatibleVersion="6.1.0.1" Version="6.2.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="6.2.1.50272" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="6.2.0.49154" Version="6.2.0.49154" />
+		<ApplicationVersionInfo Build="6.2.1.50272" Name="LabVIEW NXG" Version="3.0.0" />
+	</SourceModelFeatureSet>
+	<DistributionDefinition Company="NI" ContentType="Binary" Product="SystemLink WebVI Plugin" TargetedProduct="LabVIEW" Version="1.0.0.7" xmlns="http://www.ni.com/GComponent.xsd">
+		<DistributionOutput CachedDisplayName="Package" Id="2" OutputTypeIdentifier="DistributionOutputType:NiPackage" p3:Homepage="https://www.ni.com" p3:MaintainerEmail="mark.black@ni.com" p3:MaintainerName="Mark Black" p3:PackageDisplayName="SystemLink WebVI Plugin" xmlns:p3="http://www.ni.com/GComponent.xsd" />
+		<DistributionBuildTarget Id="3" Target="::Web Server" />
+		<DistributionMemberDependencySource Id="4" MemberContentType="Component" RelativeLocation="&quot;National Instruments\\Shared\\Web Server\\htdocs\\plugins\\webvi_plugin&quot;" RootLocation="ApplicationFiles_64" Target="::Web Server::Interactive::WebApp.gcomp" />
+		<DistributionMemberDependencySource Id="8" RelativeLocation="&quot;National Instruments\\Shared\\Web Server\\conf\\conf.d&quot;" RootLocation="ApplicationFiles_64" Target="::Web Server::Interactive::Web Server::support files::52_webvi_plugin.conf" />
+		<DistributionMemberDependencySource Id="9" RelativeLocation="&quot;National Instruments\\Shared\\Web Server\\conf\\htpriv.d&quot;" RootLocation="ApplicationFiles_64" Target="::Web Server::Interactive::Web Server::support files::webvi_plugin.htpriv" />
+		<DistributionMemberDependencySource Id="10" RelativeLocation="&quot;National Instruments\\Shared\\Web Server\\conf\\htpriv.d&quot;" RootLocation="ApplicationFiles_64" Target="::Web Server::Interactive::Web Server::support files::webvi_plugin.xml" />
+	</DistributionDefinition>
+</SourceFile>
