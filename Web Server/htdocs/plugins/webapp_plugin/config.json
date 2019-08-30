@@ -1,0 +1,29 @@
+{
+   "authorizationMarker": "/plugins/webapp_plugin/resources/marker.txt",
+   "buttonIconCls": "fa fa-area-chart",
+   "buttonLabelToken": "webapp_plugin.pluginTitle",
+   "buttonTooltipToken": "webapp_plugin.pluginTitle",
+   "iframeResources": {
+      "en": {
+         "json": [
+            "resources/json/locales/en.json"
+         ]
+      }
+   },
+   "iframeSrc": "plugins/webapp_plugin/index.html",
+   "orderWeight": 2,
+   "permission": "",
+   "resources": {
+      "en": {
+         "css": [
+            "plugins/webapp_plugin/resources/css/webapp_plugin.css"
+         ],
+         "json": [
+            "plugins/webapp_plugin/resources/json/locales/en.json"
+         ]
+      }
+   },
+   "routeToken": "webapp_plugin",
+   "titleToken": "webapp_plugin.pluginTitle",
+   "waitUntilLaunched": false
+}
