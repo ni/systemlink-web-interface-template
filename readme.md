@@ -33,21 +33,24 @@ This repository contains a project created in LabVIEW NXG 3.0 preconfigured to b
 
 ## Creating a Generic SystemLink Web Application Plugin
 The following instructions can be used to add any generic web application created with any framework as a SystemLink plugin.
-The following refers to the plugin and 'webapp_plugin'. 
-
-* Copy the `Web Server\htdocs` and `Web Server\conf` folders and files to your SystemLink web server (e.g. the NI Web Server)  `C:\Program Files\National Instruments\Shared\Web Server`. **Note** this step is not necessary if you are using NI Packages and SystemLink feeds to install the application on the SystemLink Server. See **Installing a Plugin Build in LabVIEW NXG**.
+The following refers to the plugin as 'webapp_plugin'. 
 
 ### Name
-To change the name of the plugin in the SystemLink homepage, change the `pluginTitle` value within the en.json file –
+To change the name of the plugin in the SystemLink homepage, change the `pluginTitle` value within the en.json file as well as a few values within the config.json file:
+ 
+`C:\Program Files\National Instruments\Shared\Web Server\htdocs\plugins\webapp_plugin2\resources\json\locales\en.json`
 
-```
-htdocs\plugins\webapp_plugin\resources\json\locales\en.json
+```json
+{
+   "webapp_plugin2": {
+      "pluginTitle": "Web Application 2"
+   }
+}
 ```
 
-To duplicate the webapp_plugin, you would also need to update a few other values with the config.json and en.json files. E.g.
 `C:\Program Files\National Instruments\Shared\Web Server\htdocs\plugins\webapp_plugin2\config.json`
 
-```
+```json
 {
    "authorizationMarker": "/plugins/webapp_plugin2/resources/marker.txt",
    "buttonIconCls": "fa fa-area-chart",
@@ -78,21 +81,11 @@ To duplicate the webapp_plugin, you would also need to update a few other values
    "waitUntilLaunched": false
 }
 ```
- 
-`C:\Program Files\National Instruments\Shared\Web Server\htdocs\plugins\webapp_plugin2\resources\json\locales\en.json`
-
-```
-{
-   "webapp_plugin2": {
-      "pluginTitle": "Web Application 2"
-   }
-}
-```
-
 
 ### Access Control 
-To configure security/access control for all Web VIs in one place, modify the `52_webapp_plugin.conf` file, and duplicate the `<Directory>` tag to specify any other plugins. E.g. 
- ```
+To configure security/access control for all Web VIs in one place, modify the `52_webapp_plugin.conf` file, and duplicate the `<Directory>` tag to specify any other plugins. 
+
+ ```xml
 <Directory htdocs/plugins/webapp_plugin/resources>
     # Tell the privilege module to use webapp_plugin.htpriv
 	Session On
@@ -109,12 +102,15 @@ To configure security/access control for all Web VIs in one place, modify the `5
 
 To change the name of the application shown in the NI Web Server Configuration utility, change the <description> tag within the `conf\htpriv.d\webapp_plugin.xml` file. E.g.
 
-```
+```xml
 <description xml:lang="en">Web Application</description>
 ```
 
 ### Icon
-* We use font awesome <http://fontawesome.io/icons/> by default for SWIF icons and you can modify `htdocs\plugins\webapp_plugin\config.json` to use a different icon.
+We use font awesome <http://fontawesome.io/icons/> by default for SWIF icons
 * Add the icon image file to `htdocs\plugins\webapp_plugin\resources\images`.
 * Modify `htdocs\plugins\webapp_plugin\resources\css\webapp_plugin.css` to use the new icon.
 * Modify `htdocs\plugins\webapp_plugin\config.json` to use the new icon class.
+
+### Copying the Plugin files to the Server
+Copy the `Web Server\htdocs` and `Web Server\conf` folders and files to your SystemLink web server (e.g. the NI Web Server)  `C:\Program Files\National Instruments\Shared\Web Server`. **Note** this step is not necessary if you are using NI Packages and SystemLink feeds to install the application on the SystemLink Server. See **Installing a Plugin Build in LabVIEW NXG**.
