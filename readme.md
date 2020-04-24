@@ -33,15 +33,88 @@ This repository contains a project created in LabVIEW NXG 3.0 preconfigured to b
 
 ## Creating a Generic SystemLink Web Application Plugin
 The following instructions can be used to add any generic web application created with any framework as a SystemLink plugin.
+The following refers to the plugin and 'webapp_plugin'. 
 
-### Installing and Customizing the Plugin
-* Modify `conf\htpriv.d\webapp_plugin.xml` to change the name of your application and permissions in the NI Web Server Configuration utility.
-* Modify `htdocs\plugins\webapp_plugin\resources\json\locales\en.json` to change the display name of your web application as shown in the web interface
+* Copy the `Web Server\htdocs` and `Web Server\conf` folders and files to your SystemLink web server (e.g. the NI Web Server)  `C:\Program Files\National Instruments\Shared\Web Server`. **Note** this step is not necessary if you are using NI Packages and SystemLink feeds to install the application on the SystemLink Server. See **Installing a Plugin Build in LabVIEW NXG**.
+
+### Name
+To change the name of the plugin in the SystemLink homepage, change the `pluginTitle` value within the en.json file –
+
+```
+htdocs\plugins\webapp_plugin\resources\json\locales\en.json
+```
+
+To duplicate the webapp_plugin, you would also need to update a few other values with the config.json and en.json files. E.g.
+`C:\Program Files\National Instruments\Shared\Web Server\htdocs\plugins\webapp_plugin2\config.json`
+
+```
+{
+   "authorizationMarker": "/plugins/webapp_plugin2/resources/marker.txt",
+   "buttonIconCls": "fa fa-area-chart",
+   "buttonLabelToken": "webapp_plugin2.pluginTitle",
+   "buttonTooltipToken": "webapp_plugin2.pluginTitle",
+   "iframeResources": {
+      "en": {
+         "json": [
+            "resources/json/locales/en.json"
+         ]
+      }
+   },
+   "iframeSrc": "plugins/webapp_plugin2/index.html",
+   "orderWeight": 2,
+   "permission": "",
+   "resources": {
+      "en": {
+         "css": [
+            "plugins/webapp_plugin2/resources/css/webapp_plugin.css"
+         ],
+         "json": [
+            "plugins/webapp_plugin2/resources/json/locales/en.json"
+         ]
+      }
+   },
+   "routeToken": "webapp_plugin2",
+   "titleToken": "webapp_plugin2.pluginTitle",
+   "waitUntilLaunched": false
+}
+```
+ 
+`C:\Program Files\National Instruments\Shared\Web Server\htdocs\plugins\webapp_plugin2\resources\json\locales\en.json`
+
+```
+{
+   "webapp_plugin2": {
+      "pluginTitle": "Web Application 2"
+   }
+}
+```
+
+
+### Access Control 
+To configure security/access control for all Web VIs in one place, modify the `52_webapp_plugin.conf` file, and duplicate the `<Directory>` tag to specify any other plugins. E.g. 
+ ```
+<Directory htdocs/plugins/webapp_plugin/resources>
+    # Tell the privilege module to use webapp_plugin.htpriv
+	Session On
+    AuthNIPrivilegeApplication webapp_plugin
+    Require privilege ModifyResource
+</Directory> 
+<Directory htdocs/plugins/webapp_plugin2/resources>
+    # Tell the privilege module to use webapp_plugin.htpriv
+	Session On
+    AuthNIPrivilegeApplication webapp_plugin
+    Require privilege ModifyResource
+</Directory> ​
+```
+
+To change the name of the application shown in the NI Web Server Configuration utility, change the <description> tag within the `conf\htpriv.d\webapp_plugin.xml` file. E.g.
+
+```
+<description xml:lang="en">Web Application</description>
+```
+
+### Icon
 * We use font awesome <http://fontawesome.io/icons/> by default for SWIF icons and you can modify `htdocs\plugins\webapp_plugin\config.json` to use a different icon.
-* Replace `htdocs\plugins\webapp_plugin\index.html` with your application or modify `htdocs\plugins\webapp_plugin\config.json` if you need to launch a page other than index.html
-* Copy the `Web Server\htdocs` and `Web Server\conf` folders and files to your SystemLink web server (e.g. the NI Web Server)  `C:\Program Files\National Instruments\Shared\Web Server`. **Note** this step is not necessary if you are using NI Packages and SystemLink feeds to install the applicaion on the SystemLink Server. See **Installing a Plugin Build in LabVIEW NXG**.
-
-### Defining a Custom Icon
 * Add the icon image file to `htdocs\plugins\webapp_plugin\resources\images`.
 * Modify `htdocs\plugins\webapp_plugin\resources\css\webapp_plugin.css` to use the new icon.
 * Modify `htdocs\plugins\webapp_plugin\config.json` to use the new icon class.
