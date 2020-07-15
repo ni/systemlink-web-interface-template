@@ -1,15 +1,8 @@
 {
    "authorizationMarker": "/plugins/webapp_plugin/resources/marker.txt",
-   "buttonIconCls": "fa fa-area-chart",
+   "buttonIconCls": "webapp_plugin-icon",
    "buttonLabelToken": "webapp_plugin.pluginTitle",
    "buttonTooltipToken": "webapp_plugin.pluginTitle",
-   "iframeResources": {
-      "en": {
-         "json": [
-            "resources/json/locales/en.json"
-         ]
-      }
-   },
    "iframeSrc": "plugins/webapp_plugin/index.html",
    "orderWeight": 2,
    "permission": "",

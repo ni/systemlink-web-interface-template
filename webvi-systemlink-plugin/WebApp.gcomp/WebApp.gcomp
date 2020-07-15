@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="132071B3C1594669197F32CD92CCF8AFBBEB222C93E89179E85B4A41E6A4672FFC0D61D7BF3A0C3FFBBAB7B09F5EB93EA160FF5E0ED993CC81BAB170DDF67CA4" Timestamp="1D55DD4BA1B1C59" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="203985239947956D33C4C776D9123EEEB2E99A75A6FEC5B13665B0CB90D172EB7095F4141728952582DACB783DEC611F1D67603414D61F0EA511DFFCA90857DE" Timestamp="1D65AEC98694DBB" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
-		<ParsableNamespace AssemblyFileVersion="6.2.1.50272" FeatureSetName="GComponentFeatureSet" Name="http://www.ni.com/GComponent.xsd" OldestCompatibleVersion="6.1.0.1" Version="6.2.0.49152" />
-		<ParsableNamespace AssemblyFileVersion="6.2.1.50272" FeatureSetName="Web Module: WebVI" Name="http://www.ni.com/NationalInstruments.LabVIEW.HtmlVI" OldestCompatibleVersion="6.2.0.0" Version="6.2.0.49152" />
-		<ParsableNamespace AssemblyFileVersion="6.2.1.50272" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="6.2.0.49154" Version="6.2.0.49154" />
-		<ApplicationVersionInfo Build="6.2.1.50272" Name="LabVIEW NXG" Version="3.0.0" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="GComponentFeatureSet" Name="http://www.ni.com/GComponent.xsd" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Web Module: WebVI" Name="http://www.ni.com/NationalInstruments.LabVIEW.HtmlVI" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="8.1.0.50414" Name="LabVIEW NXG" Version="5.0.0" />
 	</SourceModelFeatureSet>
 	<ComponentDefinition DefaultConfigurationName="Configuration1" Id="1" RootNamespaceId="29" xmlns="http://www.ni.com/GComponent.xsd">
 		<Icon Id="2" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
@@ -16,9 +16,6 @@
 		<ComponentConfiguration ComponentSubtypeIdentifier="WebApplication" Id="10" Name="Configuration1">
 			<CompilerSymbolTable Id="11" xmlns="http://www.ni.com/PlatformFramework" />
 			<WebApplicationOutputTypeProperties Id="12" xmlns="http://www.ni.com/NationalInstruments.LabVIEW.HtmlVI" />
-			<ComponentItemProperties AlwaysInclude="True" AssociatedEnvoyId="73" Id="74" />
-			<ComponentItemProperties AlwaysInclude="True" AssociatedEnvoyId="75" Id="77" />
-			<ComponentItemProperties AlwaysInclude="True" AssociatedEnvoyId="76" Id="78" />
 			<ComponentItemProperties AlwaysInclude="True" AssociatedEnvoyId="79" Id="80" />
 			<ComponentItemProperties AssociatedEnvoyId="81" Id="82" TopLevel="True" />
 			<ComponentItemProperties AlwaysInclude="True" AssociatedEnvoyId="84" Id="85" />
@@ -28,67 +25,29 @@
 		</ComponentConfiguration>
 	</ComponentDefinition>
 	<EnvoyManagerFile Id="6" xmlns="http://www.ni.com/PlatformFramework">
-		<ProjectSettings Id="7" ModelDefinitionType="ProjectSettings" Name="ZProjectSettings" />
+		<EnvoyManagerRootEnvoy Id="7" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
 		<EmbeddedDefinitionReference Id="8" ModelDefinitionType="{http://www.ni.com/GComponent.xsd}ComponentDefinitionEnvoyHierarchyRoot" Name="Global namespace">
 			<ComponentDefinitionEnvoyHierarchyRoot xmlns="http://www.ni.com/GComponent.xsd" />
 			<NameScopingEnvoy AutomaticallyResolveUp="True" Id="29" Name="Web Server">
-				<NameScopingEnvoy AutomaticallyResolveUp="True" Id="35" Name="support files">
-					<EmbeddedDefinitionReference Id="73" ModelDefinitionType="NationalInstruments.ProjectExplorer.ExternalFileSupport.Modeling.ExternalFileType" Name="52_webvi_plugin.conf">
-						<ExternalFile>
-							<p.StoragePath>"support files\\52_webvi_plugin.conf"</p.StoragePath>
-						</ExternalFile>
-					</EmbeddedDefinitionReference>
-					<EmbeddedDefinitionReference Id="75" ModelDefinitionType="NationalInstruments.ProjectExplorer.ExternalFileSupport.Modeling.ExternalFileType" Name="webvi_plugin.htpriv">
-						<ExternalFile>
-							<p.StoragePath>"support files\\webvi_plugin.htpriv"</p.StoragePath>
-						</ExternalFile>
-					</EmbeddedDefinitionReference>
-					<EmbeddedDefinitionReference Id="76" ModelDefinitionType="NationalInstruments.ProjectExplorer.ExternalFileSupport.Modeling.ExternalFileType" Name="webvi_plugin.xml">
-						<ExternalFile>
-							<p.StoragePath>"support files\\webvi_plugin.xml"</p.StoragePath>
-						</ExternalFile>
-					</EmbeddedDefinitionReference>
-				</NameScopingEnvoy>
-				<EmbeddedDefinitionReference Id="79" ModelDefinitionType="NationalInstruments.ProjectExplorer.ExternalFileSupport.Modeling.ExternalFileType" Name="config.json">
-					<ExternalFile>
-						<p.StoragePath>config.json</p.StoragePath>
-					</ExternalFile>
-				</EmbeddedDefinitionReference>
+				<FileReference Bindings=".json" Id="79" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="config.json" StoragePath="config.json" />
 				<SourceFileReference Id="81" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="index.gviweb" OverridingModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.HTMLVirtualInstrument" StoragePath="index.gviweb" />
 				<NameScopingEnvoy AutomaticallyResolveUp="True" Id="83" Name="resources">
-					<EmbeddedDefinitionReference Id="84" ModelDefinitionType="NationalInstruments.ProjectExplorer.ExternalFileSupport.Modeling.ExternalFileType" Name="marker.txt">
-						<ExternalFile>
-							<p.StoragePath>"resources\\marker.txt"</p.StoragePath>
-						</ExternalFile>
-					</EmbeddedDefinitionReference>
+					<FileReference Bindings=".txt" Id="84" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="marker.txt" StoragePath="resources\marker.txt" />
 					<NameScopingEnvoy AutomaticallyResolveUp="True" Id="86" Name="css">
-						<EmbeddedDefinitionReference Id="90" ModelDefinitionType="NationalInstruments.ProjectExplorer.ExternalFileSupport.Modeling.ExternalFileType" Name="webvi_plugin.css">
-							<ExternalFile>
-								<p.StoragePath>"resources\\css\\webvi_plugin.css"</p.StoragePath>
-							</ExternalFile>
-						</EmbeddedDefinitionReference>
+						<FileReference Bindings=".css" Id="90" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="webvi_plugin.css" StoragePath="resources\css\webvi_plugin.css" />
 					</NameScopingEnvoy>
 					<NameScopingEnvoy AutomaticallyResolveUp="True" Id="87" Name="images">
-						<EmbeddedDefinitionReference Id="92" ModelDefinitionType="NationalInstruments.ProjectExplorer.ExternalFileSupport.Modeling.ExternalFileType" Name="labview.png">
-							<ExternalFile>
-								<p.StoragePath>"resources\\images\\labview.png"</p.StoragePath>
-							</ExternalFile>
-						</EmbeddedDefinitionReference>
+						<FileReference Bindings=".png" Id="92" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="labview.png" StoragePath="resources\images\labview.png" />
 					</NameScopingEnvoy>
 					<NameScopingEnvoy AutomaticallyResolveUp="True" Id="88" Name="json">
 						<NameScopingEnvoy AutomaticallyResolveUp="True" Id="89" Name="locales">
-							<EmbeddedDefinitionReference Id="94" ModelDefinitionType="NationalInstruments.ProjectExplorer.ExternalFileSupport.Modeling.ExternalFileType" Name="en.json">
-								<ExternalFile>
-									<p.StoragePath>"resources\\json\\locales\\en.json"</p.StoragePath>
-								</ExternalFile>
-							</EmbeddedDefinitionReference>
+							<FileReference Bindings=".json" Id="94" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="en.json" StoragePath="resources\json\locales\en.json" />
 						</NameScopingEnvoy>
 					</NameScopingEnvoy>
 				</NameScopingEnvoy>
 			</NameScopingEnvoy>
 		</EmbeddedDefinitionReference>
-		<NameScopingEnvoy Id="9" ModelDefinitionType="{http://www.ni.com/GComponent.xsd}ComponentDefinitionContentReferenceRoot" Name="WebApp.gcomp" NameTracksFileName="True">
-			<ComponentDefinitionContentReferenceRoot xmlns="http://www.ni.com/GComponent.xsd" />
+		<NameScopingEnvoy Id="9" Name="WebApp.gcomp" NameTracksFileName="True">
 			<ContentReference ContentIdentifier="10" Id="13" Name="Configuration1" OverridingModelDefinitionType="{http://www.ni.com/GComponent.xsd}ComponentConfiguration" />
 		</NameScopingEnvoy>
 	</EnvoyManagerFile>

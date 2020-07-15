@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="33A734568705E482C34CD89D00D7F7C0CB82E9874393C5D263520FDA56630148E4DBA575A763FBCAEC034A4ADE60417A0477106EDC20AB6416D541A4CC42E084" Timestamp="1D55DDC677A7CF3" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="E552132473D7D98F5D9CA88D3F52CE375B18EEC642E9A80961671476106DD532647FCD0D004BD7AE2DA06DD69F5A07BF317A0D6B02C78856D05D3D59DC2FB38B" Timestamp="1D65AF53F1B3CDF" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
-		<ParsableNamespace AssemblyFileVersion="6.2.1.50272" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="6.2.0.49152" Version="6.2.0.49152" />
-		<ParsableNamespace AssemblyFileVersion="6.2.1.50272" FeatureSetName="LabVIEW Virtual Instrument" Name="http://www.ni.com/LabVIEW.VI" OldestCompatibleVersion="6.2.0.49152" Version="6.2.0.49152" />
-		<ParsableNamespace AssemblyFileVersion="6.2.1.50272" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="6.2.0.49153" Version="6.2.0.49153" />
-		<ParsableNamespace AssemblyFileVersion="6.2.1.50272" FeatureSetName="Web Module: WebVI" Name="http://www.ni.com/NationalInstruments.LabVIEW.HtmlVI" OldestCompatibleVersion="6.2.0.0" Version="6.2.0.49152" />
-		<ParsableNamespace AssemblyFileVersion="6.2.1.50272" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="6.2.0.49154" Version="6.2.0.49154" />
-		<ApplicationVersionInfo Build="6.2.1.50272" Name="LabVIEW NXG" Version="3.0.0" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="LabVIEW Virtual Instrument" Name="http://www.ni.com/LabVIEW.VI" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Web Module: WebVI" Name="http://www.ni.com/NationalInstruments.LabVIEW.HtmlVI" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="8.1.0.50414" Name="LabVIEW NXG" Version="5.0.0" />
 	</SourceModelFeatureSet>
 	<VirtualInstrument Id="1" OverridingModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.HTMLVirtualInstrument" xmlns="http://www.ni.com/LabVIEW.VI">
 		<Icon Id="2" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
@@ -37,36 +38,60 @@
 		<DiagramUnplacedItems Id="10" xmlns="http://www.ni.com/MocCommon" />
 		<FrontPanelUnplacedItems Id="11" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0" />
 		<BlockDiagram Id="12">
-			<WhileLoop Bounds="285 110 541 355" DiagramId="17" Id="16">
-				<LoopIteration Bounds="5 325 15 15" Id="18" />
-				<LoopCondition Bounds="475 320 15 15" Id="19" />
-				<Literal Bounds="420 320 25 15" DataType="Boolean" Id="20" Label="21" xmlns="http://www.ni.com/MocCommon">
+			<WhileLoop Bounds="530 320 296 145" DiagramId="17" Id="16">
+				<LoopIteration Bounds="5 115 15 15" Id="18" />
+				<LoopCondition Bounds="230 110 15 15" Id="19" />
+				<Literal Bounds="175 110 25 15" DataType="Boolean" Id="20" Label="21" xmlns="http://www.ni.com/MocCommon">
 					<p.Data>False</p.Data>
 					<BooleanBehavior />
 				</Literal>
-				<NodeLabel AttachedTo="20" Bounds="385 320 30 15" Id="21" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+				<NodeLabel AttachedTo="20" Bounds="140 110 30 15" Id="21" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
 					<p.Text>stop</p.Text>
 				</NodeLabel>
-				<Wire Id="22" Joints="N(20:Out)|(445,325) N(19:Input)|(475,325)" xmlns="http://www.ni.com/PlatformFramework" />
-				<Wait Bounds="450 265 40 40" Id="23" />
-				<Literal Bounds="400 280 40 15" DataType="UInt32" Id="24" Label="25" xmlns="http://www.ni.com/MocCommon">
+				<Wire Id="22" Joints="N(20:Out)|(200,115) N(19:Input)|(230,115)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wait Bounds="205 55 40 40" Id="23" />
+				<Literal Bounds="155 70 40 15" DataType="UInt32" Id="24" Label="25" xmlns="http://www.ni.com/MocCommon">
 					<p.Data>50</p.Data>
 					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
 				</Literal>
-				<NodeLabel AttachedTo="24" Bounds="365 280 30 15" Id="25" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+				<NodeLabel AttachedTo="24" Bounds="120 70 30 15" Id="25" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
 					<p.Text>milliseconds to wait</p.Text>
 				</NodeLabel>
-				<Wire Id="26" Joints="N(24:Out)|(440,285) N(23:time to wait)|(450,285)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="26" Joints="N(24:Out)|(195,75) N(23:time to wait)|(205,75)" xmlns="http://www.ni.com/PlatformFramework" />
+				<DataAccessor Bounds="50 115 40 15" DataItem="b44c672504be409eaf18717ab48fbb0c" Id="8e56eefd53af42af82a333321398a029" Label="cee69a0a56a64dacb1b8ff4f854bccc8" xmlns="http://www.ni.com/MocCommon">
+					<Terminal DataType="Int32" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+				</DataAccessor>
+				<NodeLabel AttachedTo="8e56eefd53af42af82a333321398a029" Bounds="95 115 42 14" Id="cee69a0a56a64dacb1b8ff4f854bccc8" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>counter</p.Text>
+				</NodeLabel>
+				<Wire Id="1da004b4a4c44f7cbdebddaeb6e06817" Joints="N(18:Output)|(20,120) N(8e56eefd53af42af82a333321398a029:Value)|(53,120)" xmlns="http://www.ni.com/PlatformFramework" />
 			</WhileLoop>
-			<Comment Bounds="295 480 520 42" Id="28" SizeToText="False" xmlns="http://www.ni.com/MocCommon">
-				<p.Text>Top-Level WebVIs usually contain a While Loop that never stops so that they can continue running as long as the web page is open in the user's web browser.</p.Text>
-			</Comment>
-			<Comment Bounds="80 230 170 90" Id="29" SizeToText="False" xmlns="http://www.ni.com/MocCommon">
-				<p.Text>Place setup code before the loop. For example, perform initial data communication and wire the results into the loop.</p.Text>
-			</Comment>
 		</BlockDiagram>
-		<HtmlFrontPanel Height="[float]768" Id="15" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0" Width="[float]1024" xmlns="http://www.ni.com/NationalInstruments.LabVIEW.HtmlVI">
-			<HtmlText BaseName="[string]Text" Height="[float]32" Id="45" Left="[float]244" MinHeight="[float]11" MinWidth="[float]11" Text="[string]On the WebVI Panel, place controls and indicators to respond to user input and display data.&#xD;&#xA;These controls will appear on the web page that is created when you build this Web Application." TextWrapping="[TextWrapping]Wrap" Top="[float]180" Width="[float]516" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+		<HtmlFrontPanel Height="[float]768" Id="15" LayoutSystem="[LayoutSystem]Flexible" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0" Width="[float]1024" xmlns="http://www.ni.com/NationalInstruments.LabVIEW.HtmlVI">
+			<FlexibleLayoutGroup Height="[float]68" Id="ca3cbc36694f4fd79f4e5a5034941786" Left="[float]30" Top="[float]30" Width="[float]964" xmlns="http://www.ni.com/PanelCommon">
+				<FlexibleLayoutWrapper FlexGrow="[double]1" Height="[float]68" Id="e51efa59ec1744768c9ddd6d4e1f97c4" Left="[float]0" Top="[float]0" Width="[float]964">
+					<FlexibleLayoutContainer Background="[SMSolidColorBrush]#ff00b0f0" Height="[float]52" HorizontalContentAlignment="[FlexibleLayoutHorizontalContentAlignment]Center" Id="5045f1243a594dc4bbdde9d53ee0de3c" Left="[float]8" Top="[float]8" Width="[float]948">
+						<FlexibleLayoutComponent Height="[float]40" Id="606d0dbf0bad457a9955162b7b8cd1c5" Left="[float]302" Top="[float]6" Width="[float]344">
+							<Text BaseName="[string]Text" Height="[float]40" Id="b4e67c19dbc5487c89763a531394a764" Left="[float]0" SizeMode="[TextModelSizeMode]Fixed" Text="[string]WebVI Counter" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" Width="[float]344" xmlns="http://www.ni.com/PlatformFramework">
+								<FontSetting FontFamily="Segoe UI" FontSize="24" Id="21d2ca8a0d934edc822df66d924f23dc" />
+							</Text>
+						</FlexibleLayoutComponent>
+					</FlexibleLayoutContainer>
+				</FlexibleLayoutWrapper>
+			</FlexibleLayoutGroup>
+			<FlexibleLayoutGroup Height="[float]72" Id="d3b0dc7e2d594fa689cee8598c3af186" Left="[float]30" Top="[float]98" Width="[float]964" xmlns="http://www.ni.com/PanelCommon">
+				<FlexibleLayoutWrapper FlexGrow="[double]1" Height="[float]72" Id="2b5fd979f783490cbdc555d23e33b551" Left="[float]0" Top="[float]0" Width="[float]964">
+					<FlexibleLayoutContainer Height="[float]56" HorizontalContentAlignment="[FlexibleLayoutHorizontalContentAlignment]Center" Id="cb635ad157cc4602a5274f7c31e252cc" Left="[float]8" Top="[float]8" Width="[float]948">
+						<FlexibleLayoutComponent Height="[float]44" Id="67df059143cc4fe6bb5ff591ca319116" Left="[float]438" Top="[float]6" Width="[float]72">
+							<NumericText BaseName="[string]Numeric" Height="[float]24" Id="7271a6798fa24161ac5bb01c6a274d3f" Interval="[int]1" IsReadOnly="[bool]True" Label="[UIModel]b5088185e9cc471e873f07cb373551f5" Left="[float]0" RadixBase="[RadixBase]Decimal" TabIndex="[int]0" Top="[float]20" Value="{DataItemBinding Id=b44c672504be409eaf18717ab48fbb0c}" ValueFormatter="[string]Decimal, Uppercase, Signed" ValueType="[Type]Int32" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<Label Height="[float]16" Id="b5088185e9cc471e873f07cb373551f5" LabelAlignment="[PartAlignment]TopCenter" LabelOwner="[UIModel]7271a6798fa24161ac5bb01c6a274d3f" Left="[float]16" Text="[string]counter" Top="[float]0" Width="[float]41" />
+						</FlexibleLayoutComponent>
+					</FlexibleLayoutContainer>
+				</FlexibleLayoutWrapper>
+			</FlexibleLayoutGroup>
 		</HtmlFrontPanel>
+		<DataItem AdaptToDiagramType="True" DataType="Int32" Id="b44c672504be409eaf18717ab48fbb0c" Name="counter" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+		</DataItem>
 	</VirtualInstrument>
 </SourceFile>

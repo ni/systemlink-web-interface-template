@@ -2,7 +2,7 @@
 
 ## Installing a Plugin Built in LabVIEW NXG
 
-This repository contains a project created in LabVIEW NXG 3.0 preconfigured to build a NIPKG that can be used to install a built WebVI application onto a SystemLink Server. The following instructions provide steps to install the NIPKG onto the a SystemLink server in the same manner that SystemLink server installs NIPKGs onto remote Windows and Linux Real-Time targets.
+This repository contains a project created in LabVIEW NXG preconfigured to build a NIPKG that can be used to install a built WebVI application onto a SystemLink Server. The following instructions provide steps to install the NIPKG onto the a SystemLink server in the same manner that SystemLink server installs NIPKGs onto remote Windows and Linux Real-Time targets.
 
 ### Configuring the SystemLink server for self deployment
 
@@ -16,7 +16,7 @@ This repository contains a project created in LabVIEW NXG 3.0 preconfigured to b
 
 ### Building the LabVIEW NXG WebVI Application
 
-* Open `webvi-systemlink-plugin.lvproject` in LabVIEW NXG 3.0 or later.
+* Open `webvi-systemlink-plugin.lvproject` in LabVIEW NXG.
 * Edit the WebVI in the project as you see fit.
 * See **Installing and Customizing the Plugin** in this readme for details for modifying the support files needed for SystemLink plugins.
 * Go to the WebApp.lvdist and click **Build Distribution**
@@ -61,23 +61,16 @@ To change the name of the plugin in the SystemLink homepage, change the `pluginT
    "buttonIconCls": "fa fa-area-chart",
    "buttonLabelToken": "webapp_plugin2.pluginTitle",
    "buttonTooltipToken": "webapp_plugin2.pluginTitle",
-   "iframeResources": {
-      "en": {
-         "json": [
-            "resources/json/locales/en.json"
-         ]
-      }
-   },
-   "iframeSrc": "plugins/webapp_plugin2/index.html",
+   "iframeSrc": "/plugins/webapp_plugin2/index.html",
    "orderWeight": 2,
    "permission": "",
    "resources": {
       "en": {
          "css": [
-            "plugins/webapp_plugin2/resources/css/webapp_plugin.css"
+            "/plugins/webapp_plugin2/resources/css/webapp_plugin.css"
          ],
          "json": [
-            "plugins/webapp_plugin2/resources/json/locales/en.json"
+            "/plugins/webapp_plugin2/resources/json/locales/en.json"
          ]
       }
    },
@@ -91,18 +84,18 @@ To change the name of the plugin in the SystemLink homepage, change the `pluginT
 
 To configure security/access control for all WebVIs in one place, modify the `52_webapp_plugin.conf` file, and duplicate the `<Directory>` tag to specify any other plugins.
 
- ```xml
-<Directory htdocs/plugins/webapp_plugin/resources>
+ ```apache
+<Directory htdocs/plugins/webapp_plugin>
     # Tell the privilege module to use webapp_plugin.htpriv
    Session On
     AuthNIPrivilegeApplication webapp_plugin
-    Require privilege ModifyResource
+    Require privilege ViewResource
 </Directory>
-<Directory htdocs/plugins/webapp_plugin2/resources>
+<Directory htdocs/plugins/webapp_plugin2>
     # Tell the privilege module to use webapp_plugin.htpriv
    Session On
     AuthNIPrivilegeApplication webapp_plugin
-    Require privilege ModifyResource
+    Require privilege ViewResource
 </Directory> ​
 ```
 
