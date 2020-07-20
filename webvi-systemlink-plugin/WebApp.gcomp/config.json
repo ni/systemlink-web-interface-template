@@ -1,25 +1,18 @@
 {
    "authorizationMarker": "/plugins/webvi_plugin/resources/marker.txt",
-   "buttonIconCls": "fa fa-area-chart",
+   "buttonIconCls": "webvi_plugin-icon",
    "buttonLabelToken": "webvi_plugin.pluginTitle",
    "buttonTooltipToken": "webvi_plugin.pluginTitle",
-   "iframeResources": {
-      "en": {
-         "json": [
-            "resources/json/locales/en.json"
-         ]
-      }
-   },
-   "iframeSrc": "plugins/webvi_plugin/index.html",
+   "iframeSrc": "/plugins/webvi_plugin/index.html",
    "orderWeight": 2,
    "permission": "",
    "resources": {
       "en": {
          "css": [
-            "plugins/webvi_plugin/resources/css/webvi_plugin.css"
+            "/plugins/webvi_plugin/resources/css/webvi_plugin.css"
          ],
          "json": [
-            "plugins/webvi_plugin/resources/json/locales/en.json"
+            "/plugins/webvi_plugin/resources/json/locales/en.json"
          ]
       }
    },
