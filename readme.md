@@ -4,6 +4,8 @@
 
 This repository contains a project created in LabVIEW NXG preconfigured to build a NIPKG that can be used to install a built WebVI application onto a SystemLink Server. The following instructions provide steps to install the NIPKG onto the a SystemLink server in the same manner that SystemLink server installs NIPKGs onto remote Windows and Linux Real-Time targets.
 
+**Note:** After installing an NIPKG built with LabVIEW NXG, the NI Web Server will need to be restarted for the changes to take effect.
+
 ### Configuring the SystemLink server for self deployment
 
 * Log into Windows on the SystemLink server machine
@@ -32,6 +34,9 @@ This repository contains a project created in LabVIEW NXG preconfigured to build
 * If not already complete add the feed containing the NIPKG to the System
 * Go to the **Available** software tab and find the WebVI build application. This example project uses the display name *SystemLink WebVI Plugin*.
 * Select install from the dropdown button in the same row as the application.
+
+  **Note:** The NI Web Server will need to be restarted for the changes to take effect.
+
 * Upon successful install navigate back to the SystemLink landing page which lists all installed applications.
 * Under **Additional Applications** you should see an application named **Web VI**. Clicking on this icon will load the WebVI application created in LabVIEW NXG.
 
@@ -87,15 +92,13 @@ To configure security/access control for all WebVIs in one place, modify the `52
  ```apache
 <Directory htdocs/plugins/webapp_plugin>
     # Tell the privilege module to use webapp_plugin.htpriv
-   Session On
-    AuthNIPrivilegeApplication webapp_plugin
-    Require privilege ViewResource
+    Use NIAuthnEnableBrowsers
+    Use NIAuthnRequirePrivilege webapp_plugin ViewResource
 </Directory>
 <Directory htdocs/plugins/webapp_plugin2>
     # Tell the privilege module to use webapp_plugin.htpriv
-   Session On
-    AuthNIPrivilegeApplication webapp_plugin
-    Require privilege ViewResource
+    Use NIAuthnEnableBrowsers
+    Use NIAuthnRequirePrivilege webapp_plugin ViewResource
 </Directory> ​
 ```
 
@@ -115,4 +118,8 @@ We use font awesome <http://fontawesome.io/icons/> by default for SWIF icons
 
 ### Copying the Plugin files to the Server
 
-Copy the `Web Server\htdocs` and `Web Server\conf` folders and files to your SystemLink web server (e.g. the NI Web Server)  `C:\Program Files\National Instruments\Shared\Web Server`. **Note** this step is not necessary if you are using NI Packages and SystemLink feeds to install the application on the SystemLink Server. See **Installing a Plugin Build in LabVIEW NXG**.
+Copy the `Web Server\htdocs` and `Web Server\conf` folders and files to your SystemLink web server (e.g. the NI Web Server)  `C:\Program Files\National Instruments\Shared\Web Server`.
+
+**Note:** This step is not necessary if you are using NI Packages and SystemLink feeds to install the application on the SystemLink Server. See **Installing a Plugin Built in LabVIEW NXG**.
+
+**Note:** The NI Web Server will need to be restarted for the changes to take effect.
