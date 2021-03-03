@@ -100,7 +100,7 @@ Plugins can specify if they should appear within a group. Groups are defined in 
 ```json
 {
     "id": "webapp-group",
-    "iconClass": "sti sti-legend-view",
+    "iconClass": "fa fa-industry",
     "order": 10,
     "resources": {
         "en": {
