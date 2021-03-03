@@ -4,7 +4,13 @@
    "buttonLabelToken": "webapp_plugin.pluginTitle",
    "buttonTooltipToken": "webapp_plugin.pluginTitle",
    "iframeSrc": "plugins/webapp_plugin/index.html",
+   "navigationItems": [{
+      "id": "webapp-plugin",
+      "titleToken": "webapp_plugin.pluginTitle",
+      "url": "#webapp_plugin"
+   }],
    "orderWeight": 2,
+   "pageTitleToken": "webapp_plugin.pluginTitle",
    "permission": "",
    "resources": {
       "en": {

@@ -44,6 +44,105 @@ This repository contains a project created in LabVIEW NXG preconfigured to build
 
 The following instructions can be used to add any generic web application created with any framework as a SystemLink plugin. A working plugin template is included in the `Web Server` folder called `webapp_plugin`. You can modify this template or duplicate the plugin by modifying the following configuration files. E.g. If you needed to create a second plugin (`webapp_plugin2`), you could duplicate the `webapp_plugin` directory, and make the following changes.
 
+### Plugins in SystemLink 2021R1 and newer
+
+Plugins in SystemLink 2021R1 appear in a navigation tree on the left of the page instead of the original homepage. In the config.json file, there is a section called `navigationItems` that specifies how the plugin appears in the navigation tree. Plugins can specify any number of items in the navigation tree. Each item should specify a unique id, a title token, and a URL beginning with a hash. Optionally, you can specify a group id and order within that group.
+
+**Note:** The Name, Access Control, and Icon sections only apply to plugins in earlier versions of SystemLink.
+
+To change the name of the plugin in the navigation tree, change the `pluginTitle` value within the en.json file.
+
+`C:\Program Files\National Instruments\Shared\Web Server\htdocs\plugins\webapp_plugin\resources\json\locales\en.json`
+
+```json
+{
+   "webapp_plugin2": {
+      "pluginTitle": "Web Application for SystemLink 2021"
+   }
+}
+```
+
+Anywhere in the config.json file that references `webapp_plugin.pluginTitle` will get your updated value: `titleToken` within `navigationItems` updates what appears in the navigation tree, `pageTitleToken` updates what is shown on the browser tab title, and `titleToken` updates what is shown in the top bar when the app is open.
+
+`C:\Program Files\National Instruments\Shared\Web Server\htdocs\plugins\webapp_plugin\config.json`
+
+```json
+{
+   "authorizationMarker": "/plugins/webapp_plugin/resources/marker.txt",
+   "iframeSrc": "plugins/webapp_plugin/index.html",
+   "navigationItems": [{
+      "id": "webapp-plugin",
+      "titleToken": "webapp_plugin.pluginTitle",
+      "url": "#webapp_plugin"
+   }],
+   "pageTitleToken": "webapp_plugin.pluginTitle",
+   "resources": {
+      "en": {
+         "css": [
+            "plugins/webapp_plugin/resources/css/webapp_plugin.css"
+         ],
+         "json": [
+            "plugins/webapp_plugin/resources/json/locales/en.json"
+         ]
+      }
+   },
+   "routeToken": "webapp_plugin",
+   "titleToken": "webapp_plugin.pluginTitle"
+}
+```
+
+#### Groups
+
+Plugins can specify if they should appear within a group. Groups are defined in the `navigationGroups` directory within the SystemLink web server. To define a new group, create a subdirectory in `navigationGroups` and a config.json file within that subdirectory.
+
+`C:\Program Files\National Instruments\Shared\Web Server\htdocs\navigationGroups\webapp_group\config.json`
+
+```json
+{
+    "id": "webapp-group",
+    "iconClass": "sti sti-legend-view",
+    "order": 10,
+    "resources": {
+        "en": {
+            "json": [
+                "navigationGroups/webapp_group/resources/json/locales/en-US/webapp-group-common.json"
+            ]
+        }
+    },
+    "titleToken": "webapp.group.title"
+}
+```
+
+To add a plugin to the group, reference the group id in the plugin's config.json `navigationItems` section.
+
+`C:\Program Files\National Instruments\Shared\Web Server\htdocs\plugins\webapp_plugin\config.json`
+
+```json
+{
+   "authorizationMarker": "/plugins/webapp_plugin/resources/marker.txt",
+   "iframeSrc": "plugins/webapp_plugin/index.html",
+   "navigationItems": [{
+      "id": "webapp-plugin",
+      "groupId": "webapp-group",
+      "titleToken": "webapp_plugin.pluginTitle",
+      "url": "#webapp_plugin"
+   }],
+   "pageTitleToken": "webapp_plugin.pluginTitle",
+   "resources": {
+      "en": {
+         "css": [
+            "plugins/webapp_plugin/resources/css/webapp_plugin.css"
+         ],
+         "json": [
+            "plugins/webapp_plugin/resources/json/locales/en.json"
+         ]
+      }
+   },
+   "routeToken": "webapp_plugin",
+   "titleToken": "webapp_plugin.pluginTitle"
+}
+```
+
 ### Name
 
 To change the name of the plugin in the SystemLink homepage, change the `pluginTitle` value within the en.json file as well as a few values within the config.json file:
