@@ -222,3 +222,5 @@ Copy the `Web Server\htdocs` and `Web Server\conf` folders and files to your Sys
 **Note:** This step is not necessary if you are using NI Packages and SystemLink feeds to install the application on the SystemLink Server. See **Installing a Plugin Built in LabVIEW NXG**.
 
 **Note:** The NI Web Server will need to be restarted for the changes to take effect.
+
+**Note:** The `navigationGroups` directory in `Web Server\htdocs` is only applicable to SystemLink 2021R1 and newer.

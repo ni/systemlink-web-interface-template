@@ -1,0 +1,13 @@
+{
+    "id": "webapp-group",
+    "iconClass": "fa fa-industry",
+    "order": 10,
+    "resources": {
+        "en": {
+            "json": [
+                "navigationGroups/webapp_group/resources/json/locales/en-US/webapp-group-common.json"
+            ]
+        }
+    },
+    "titleToken": "webapp.group.title"
+}
