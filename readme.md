@@ -46,9 +46,9 @@ The following instructions can be used to add any generic web application create
 
 ### Plugins in SystemLink 2021R1 and newer
 
-Plugins in SystemLink 2021R1 appear in a navigation tree on the left of the page instead of the original homepage. In the config.json file, there is a section called `navigationItems` that specifies how the plugin appears in the navigation tree. Plugins can specify any number of items in the navigation tree. Each item should specify a unique id, a title token, and a URL beginning with a hash. Optionally, you can specify a group id and order within that group.
+Plugins in SystemLink 2021R1 appear in a navigation tree on the left of the page instead of the original homepage. In the config.json file, there is a section called `navigationItems` that specifies how the plugin appears in the navigation tree. Each navigation item should specify a unique id, a title token, and a URL beginning with a hash. Optionally, you can specify a group id and order within that group.
 
-**Note:** The Name, Access Control, and Icon sections only apply to plugins in earlier versions of SystemLink.
+**Note:** The Name and Icon sections in this document only apply to plugins in earlier versions of SystemLink.
 
 To change the name of the plugin in the navigation tree, change the `pluginTitle` value within the en.json file.
 
@@ -93,7 +93,7 @@ Anywhere in the config.json file that references `webapp_plugin.pluginTitle` wil
 
 #### Groups
 
-Plugins can specify if they should appear within a group. Groups are defined in the `navigationGroups` directory within the SystemLink web server. To define a new group, create a subdirectory in `navigationGroups` and a config.json file within that subdirectory.
+Plugins can specify if they should appear within a group. Groups are defined in the `navigationGroups` directory within the SystemLink web server. To define a new group, create a subdirectory in `navigationGroups` and add a config.json file within that subdirectory.
 
 `C:\Program Files\National Instruments\Shared\Web Server\htdocs\navigationGroups\webapp_group\config.json`
 
