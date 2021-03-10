@@ -72,6 +72,7 @@ Anywhere in the config.json file that references `webapp_plugin.pluginTitle` wil
    "iframeSrc": "plugins/webapp_plugin/index.html",
    "navigationItems": [{
       "id": "webapp-plugin",
+      "groupId": "webapp-group",
       "titleToken": "webapp_plugin.pluginTitle",
       "url": "#webapp_plugin"
    }],
