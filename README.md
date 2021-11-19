@@ -1,10 +1,10 @@
 # SystemLink Web Interface Template
 
-## Installing a Plugin Built in LabVIEW NXG
+## Installing a Plugin Built in G Web Development Software
 
-This repository contains a project created in LabVIEW NXG preconfigured to build a NIPKG that can be used to install a built WebVI application onto a SystemLink Server. The following instructions provide steps to install the NIPKG onto the a SystemLink server in the same manner that SystemLink server installs NIPKGs onto remote Windows and Linux Real-Time targets.
+This repository contains a project created in G Web Development Software preconfigured to build a NIPKG that can be used to install a built WebVI application onto a SystemLink Server. The following instructions provide steps to install the NIPKG onto the a SystemLink server in the same manner that SystemLink server installs NIPKGs onto remote Windows and Linux Real-Time targets.
 
-**Note:** After installing an NIPKG built with LabVIEW NXG, the NI Web Server will need to be restarted for the changes to take effect.
+**Note:** After installing an NIPKG built with G Web Development Software, the NI Web Server will need to be restarted for the changes to take effect.
 
 ### Configuring the SystemLink server for self deployment
 
@@ -16,9 +16,9 @@ This repository contains a project created in LabVIEW NXG preconfigured to build
 * In a browser, navigate to the **Systems Manager** application in SystemLink
 * Go to **Pending Systems** and add the newly listed system (it will be using the server's hostname) as a managed system.
 
-### Building the LabVIEW NXG WebVI Application
+### Building the G Web Development Software WebVI Application
 
-* Open `webvi-systemlink-plugin.lvproject` in LabVIEW NXG.
+* Open `webvi-systemlink-plugin.gwebproject` in G Web Development Software.
 * Edit the WebVI in the project as you see fit.
 * See **Installing and Customizing the Plugin** in this readme for details for modifying the support files needed for SystemLink plugins.
 * Go to the WebApp.lvdist and click **Build Distribution**
@@ -28,7 +28,7 @@ This repository contains a project created in LabVIEW NXG preconfigured to build
 * In a browser, navigate to the **Package Repository** application, and create a feed or reuse an existing feed.
 * In the details for the feed click the **Add** button under the **Packages** section.
 * Click **Upload Packages** and **Browse**
-* Navigate to and select the NIPKG built in LabVIEW NXG
+* Navigate to and select the NIPKG built in G Web Development Software
 * Click **Close** and navigate to your SystemLink server as its listed under **Managed Systems** and the **Systems Manager** application
 * Go to **Software** and navigate to the **Feeds** tab.
 * If not already complete add the feed containing the NIPKG to the System
@@ -38,7 +38,7 @@ This repository contains a project created in LabVIEW NXG preconfigured to build
   **Note:** The NI Web Server will need to be restarted for the changes to take effect.
 
 * Upon successful install navigate back to the SystemLink landing page which lists all installed applications.
-* Under **Additional Applications** you should see an application named **Web VI**. Clicking on this icon will load the WebVI application created in LabVIEW NXG.
+* Under **Additional Applications** you should see an application named **Web VI**. Clicking on this icon will load the WebVI application created in G Web Development Software.
 
 ## Creating a Generic SystemLink Web Application Plugin
 
@@ -220,7 +220,7 @@ We use font awesome <http://fontawesome.io/icons/> by default for SWIF icons
 
 Copy the `Web Server\htdocs` and `Web Server\conf` folders and files to your SystemLink web server (e.g. the NI Web Server)  `C:\Program Files\National Instruments\Shared\Web Server`.
 
-**Note:** This step is not necessary if you are using NI Packages and SystemLink feeds to install the application on the SystemLink Server. See **Installing a Plugin Built in LabVIEW NXG**.
+**Note:** This step is not necessary if you are using NI Packages and SystemLink feeds to install the application on the SystemLink Server. See **Installing a Plugin Built in G Web Development Software**.
 
 **Note:** The NI Web Server will need to be restarted for the changes to take effect.
 
