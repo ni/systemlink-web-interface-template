@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="AC5D497D104E6E828819D2C9CA39C894FACB52E6EF67DB9C505D86DCE833836684B3F5419E5D8B100EF94BD40511F494D094C169742724EBCE4A1844AAB19F0E" Timestamp="1D65AECF87C8685" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="EDC62886727E8171A0DCBCC6D23BAE2F6EC294C3898134A95E014C3781DD09D8BEAD78A575C1D2768B4BF75CBA2C25939BAC3BB446576EA7BDD107518B6BE4E1" Timestamp="1D7DD5E889B7E25" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
-		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="GComponentFeatureSet" Name="http://www.ni.com/GComponent.xsd" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
-		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
-		<ApplicationVersionInfo Build="8.1.0.50414" Name="LabVIEW NXG" Version="5.0.0" />
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="GComponentFeatureSet" Name="http://www.ni.com/GComponent.xsd" OldestCompatibleVersion="9.0.0.0" Version="9.0.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="9.1.0.50238" Name="G Web Development Software" Version="21.0.0" />
 	</SourceModelFeatureSet>
 	<DistributionDefinition Company="NI" Product="SystemLink WebVI Plugin" TargetedProduct="LabVIEW" Version="1.0.0.1" xmlns="http://www.ni.com/GComponent.xsd">
 		<DistributionOutput CachedDisplayName="Package" Id="2" OutputTypeIdentifier="DistributionOutputType:NiPackage" p3:CustomNipmPackageName="ni-systemlinkwebviplugin-labview-webapp-bin-1" p3:DistributionCategory="Application" p3:Homepage="https://www.ni.com" p3:MaintainerEmail="appdev@ni.com" p3:MaintainerName="Application Developer" p3:PackageDisplayName="SystemLink WebVI Plugin" xmlns:p3="http://www.ni.com/GComponent.xsd" />
-		<DistributionBuildTarget Id="3" Target="::Web Server" />
-		<DistributionMemberDependencySource Id="4" MemberContentType="{http://www.ni.com/GComponent.xsd}Component_Rebuild" RelativeLocation="&quot;National Instruments\\Shared\\Web Server\\htdocs\\plugins\\webvi_plugin&quot;" RootLocation="ApplicationFiles_64" Target="::Web Server::Interactive::WebApp.gcomp" />
-		<DistributionMemberDependencySource Id="327eb49ab7b742be828b847a0f49a413" MemberContentType="{http://www.ni.com/GComponent.xsd}SupportFile" RelativeLocation="&quot;National Instruments\\Shared\\Web Server\\conf\\conf.d&quot;" RootLocation="ApplicationFiles_64" Target="::DevSystem::Interactive::52_webvi_plugin.conf" />
-		<DistributionMemberDependencySource Id="2ad7b0eb445a4646a95652b46ba00a43" MemberContentType="{http://www.ni.com/GComponent.xsd}SupportFile" RelativeLocation="&quot;National Instruments\\Shared\\Web Server\\conf\\htpriv.d&quot;" RootLocation="ApplicationFiles_64" Target="::DevSystem::Interactive::webvi_plugin.htpriv" />
-		<DistributionMemberDependencySource Id="3f9325cf55284894a279ca487cc26e74" MemberContentType="{http://www.ni.com/GComponent.xsd}SupportFile" RelativeLocation="&quot;National Instruments\\Shared\\Web Server\\conf\\htpriv.d&quot;" RootLocation="ApplicationFiles_64" Target="::DevSystem::Interactive::webvi_plugin.xml" />
+		<DistributionBuildTarget Id="3" Target="::VireoDevSystem" />
+		<DistributionMemberDependencySource Id="4" MemberContentType="{http://www.ni.com/GComponent.xsd}Component_Rebuild" RelativeLocation="&quot;National Instruments\\Shared\\Web Server\\htdocs\\plugins\\webvi_plugin&quot;" RootLocation="ApplicationFiles_64" Target="::VireoDevSystem::Interactive::WebApp.gcomp" />
+		<DistributionMemberDependencySource Id="abb906edc5b5483c9efe8f1c7c529306" MemberContentType="{http://www.ni.com/GComponent.xsd}SupportFile" RelativeLocation="&quot;National Instruments\\Shared\\Web Server\\conf\\conf.d&quot;" RootLocation="ApplicationFiles_64" Target="::VireoDevSystem::Interactive::52_webvi_plugin.conf" />
+		<DistributionMemberDependencySource Id="63f969993db7402e96bf852b49a42b52" MemberContentType="{http://www.ni.com/GComponent.xsd}SupportFile" RelativeLocation="&quot;National Instruments\\Shared\\Web Server\\conf\\htpriv.d&quot;" RootLocation="ApplicationFiles_64" Target="::VireoDevSystem::Interactive::webvi_plugin.htpriv" />
+		<DistributionMemberDependencySource Id="c7ebe1f7a77e4822b5a71c545077b1d3" MemberContentType="{http://www.ni.com/GComponent.xsd}SupportFile" RelativeLocation="&quot;National Instruments\\Shared\\Web Server\\conf\\htpriv.d&quot;" RootLocation="ApplicationFiles_64" Target="::VireoDevSystem::Interactive::webvi_plugin.xml" />
 	</DistributionDefinition>
 </SourceFile>
