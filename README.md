@@ -2,7 +2,7 @@
 
 ## Installing a Plugin Built in G Web Development Software
 
-This repository contains a project created in G Web Development Software preconfigured to build a NIPKG that can be used to install a built WebVI application onto a SystemLink Server. The following instructions provide steps to install the NIPKG onto the a SystemLink server in the same manner that SystemLink server installs NIPKGs onto remote Windows and Linux Real-Time targets.
+This repository contains a project created in G Web Development Software preconfigured to build a NIPKG that can be used to install a built WebVI application onto a SystemLink Server. The following instructions provide steps to install the NIPKG onto a SystemLink server in the same manner that SystemLink server installs NIPKGs onto remote Windows and Linux Real-Time targets.
 
 **Note:** After installing an NIPKG built with G Web Development Software, the NI Web Server will need to be restarted for the changes to take effect.
 
