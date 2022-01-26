@@ -187,7 +187,7 @@ To change the name of the plugin in the SystemLink homepage, change the `pluginT
 
 ### Access Control
 
-To configure security/access control for all WebVIs in one place, modify the `52_webapp_plugin.conf` file, and duplicate the `<Directory>` tag to specify any other plugins.
+To configure security/access control for all WebVIs in one place, modify the `C:\Program Files\National Instruments\Shared\Web Server\conf\conf.d\52_webapp_plugin.conf` file, and duplicate the `<Directory>` tag to specify any other plugins.
 
  ```apache
 <Directory htdocs/plugins/webapp_plugin>
